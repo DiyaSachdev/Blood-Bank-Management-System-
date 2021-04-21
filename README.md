@@ -39,10 +39,6 @@ Database Schema:
 
 1.	ADDRESS: This table where the main addresses are saved so that only the Address_Id is used in the user table to avoid redundancy.
 
-
-
-
-
 	Address_Id	City	District	Neighborhood
 TYPE	numeric	varchar(20)	varchar(20)	varchar(60)
 KEY	PK			
@@ -51,17 +47,15 @@ Table 1: ADDRESS TABLE
 
 
 
-
 2.	STATUS: This table defines the users and categorizes them into the main 3 categories; blood donor, blood recipient and blood bank.
-
-
-
 
 	Status_Id	Status
 TYPE	numeric	varchar(20)
 KEY	PK	
 EXAMPLE	2	Donor
 Table 2: STATUS TABLE
+ 
+ 
  
 3.	USER: This table saves the user’s personal data in the database.
 
@@ -70,36 +64,21 @@ Table 2: STATUS TABLE
 TYPE	numeric	numeric	numeric	Varchar(10)	Varchar(45)
 KEY	PK	FK	FK		
 EXAMPLE	4	2	1000000	5539190967	123
-
-
-
-
 Table 3: USER TABLE
-
-
-
-
 
 
 
 4.	BLOOD_TYPE: This table defines and saves all the blood groups with their donation and receipt features.
 
-
-
-
-
 	Blood_Id	Blood_Code	Donates_to	Receives_from
 TYPE	numeric	Varchar(5)	Varchar(45)	Varchar(45)
 KEY	PK			
 EXAMPLE	4	O	All	O
-
 Table 4: BLOOD_GROUP TABLE
  
-5.	DONOR: This table saves the data of donors who registered to the system.
-
-
-
-
+ 
+ 
+5.	DONOR: This table saves the data of donors who registered to the system
 
 	Donor_Id	First_Name	Last_Name	Blood_Id
 TYPE	numeric	Varchar(5)	Varchar(45)	Varchar(45)
@@ -109,16 +88,7 @@ Table 5: DONOR TABLE
 
 
 
-
-
-
-
 6.	MEDICAL_INFO: This table saves the medical reports that state whether donors can donate blood or not.
-
-
-
-
-
 
 	Report_Id	Donor_Id	Date	Result
 TYPE	numeric	numeric	date	Varchar(45)
@@ -126,14 +96,9 @@ KEY	PK	FK
 EXAMPLE	150100	4	2020-05-02	No disease
 Table 6: MEDICAL_INFO TABLE
  
+ 
+ 
 7.	RECIPIENT: This table saves the data of those recipients who registered to the system.
-
-
-
-
-
-
-
 
 	Recipient_Id	First_Name	Last_Name	Blood_Id
 TYPE	numeric	Varchar(5)	Varchar(45)	Varchar(45)
@@ -146,28 +111,16 @@ Table 7: RECIPIENT TABLE
 
 8.	BLOOD_BANK: This table saves the data of blood banks which are registered to the system.
 
-
-
-
-
-
-
-
-
 	Bank_Id	Name	Capacity
 TYPE	numeric	Varchar(5)	numeric
 KEY	PK,FK		
 EXAMPLE	       1	White Cross, Pitampura	1000
-
 Table 8: BLOOD_BANK TABLE
-
 
 
 
  
 9.	GIVES_TO: This table saves the blood donations information of donors in blood banks.
-
-
 
 	Donation_Id	Donor_Id	Bank_Id	Date	Amount
 TYPE	numeric	numeric	numeric	date	numeric
@@ -178,17 +131,7 @@ Table 9: GIVES_TO TABLE
 
 
 
-
-
-
-
-
-
-
-
 10.	TAKES_FROM: This table saves the blood donations information of donors in blood banks.
-
-
 
 	Transfer_Id	Recipient_Id	Bank_Id	Date	Amount
 TYPE	numeric	numeric	numeric	date	numeric
@@ -197,14 +140,7 @@ EXAMPLE	770001	3	1	3/12/2020	450
 Table 10: TAKES_FROM TABLE 
  
 
- 
-E-R DIAGRAM
 
-
-
-Figure 3: Entity-Relationship diagram
-
- 
 
 
 Features Implemented:

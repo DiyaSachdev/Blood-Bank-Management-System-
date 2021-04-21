@@ -1,13 +1,17 @@
 # Blood-Bank-Management-System-
-Abstract
+*ABSTRACT*
+
 This paper contains a list of system specifications, a database architecture, a basic definition of the methods, and an overview of how to incorporate a blood donation management system. The aim of this project is to develop a database management framework capable of enabling the stress-free management and coordination of a blood donor database that can be quickly incorporated in NGOs.
-SUMMARY
+
+*SUMMARY*
+
 The importance and need of blood at the correct time cannot be overstated at such a period (Covid-19). The basic aim of this project was to make a database with capabilities to be useful in such times. It revolves around three types of users- donor, recipient and blood bank administrators.
 
-GENERAL DESCRIPTION
+*GENERAL DESCRIPTION*
+
 The blood donation system we aim to build with the implementation of our database would aim to facilitate the easy and efficient connection of blood donors and recipients to blood-banks. The system would register users in three groups namely, a donor, recipient and a blood bank. Our users will be classified into persons (donor and recipient) and organizations (blood-banks). We would record static locations of all users and aim to provide the most appropriate solution, taking into account distance. Persons will have their medical history and blood group recorded and made available to aid the efficiency of the system. Organizations will have their activity history recorded for accountability and references.
 
-REQUIREMENT ANALYSIS
+*REQUIREMENT ANALYSIS*
 
 An efficient blood bank database would aim to easily connect potential donors with blood-banks, blood-banks with potential recipients and vice versa. The potential donors would be connected with their nearest blood bank. The data of potential donors will be stored according to their blood types, disease history and proximity to nearest blood-bank in the database.
 
@@ -143,14 +147,18 @@ Table 10: TAKES_FROM TABLE
 
 
 
-Features Implemented:
+*Features Implemented:*
+
 We have implemented the functionality of Multi-User Environment support. It is divided into Admin, Donor and Recipient respectively.  Using Referential Integrity and its various concept helps us maintain the data consistency of the database.  Implementation of DELETE ON CASCADE and many more helps in reducing the redundancy of codes as well as the easy maintenance of code.
 The database is made to work irrespective of the platform and therefore it is hosted on a server rather than it being on the local devices of user for flexibility purposes. For this we have used REMOTE mysql servers.
 
-Limitations:
+
+
+*Limitations:*
+
 We wanted to execute the category-wise amount of blood left, in each bank. This would give a better statistical information to the blood banks as well as the recipients arriving for the blood beforehand.
 We had earlier planned to use triggers and cursors but couldn’t due to the time constraint. Also, the program is at a niche stage and we would love to scale the program for a better interface and support so that it can be usable for organisations with minimal efforts.
 
-Future Ideas:
+*Future Ideas:*
 
 We will be implementing the medical history of the donors as well as the recipients so that any possible mishappening can be ruled out. Also, we will be formulating the full blood flow path in which details of the donor(takes_from) and the recipient(gives_to) will be implemented.
